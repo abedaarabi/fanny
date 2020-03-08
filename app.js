@@ -4,11 +4,13 @@ const router = express.Router();
 const path = require("path");
 const getRoute = require("./router/get");
 app.use(express.static("client"));
+const PORT = process.env.PORT || 5000;
+const DATE = new Date();
 
 app.use("/", getRoute);
 
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+app.listen(PORT, () => {
+  console.log(`Server is running on ${PORT} ${DATE}`);
 });
 
 // module.exports = router;
