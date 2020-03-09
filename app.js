@@ -9,6 +9,7 @@ const DATE = new Date();
 
 app.use("/", getRoute);
 
+//add port
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT} ${DATE}`);
 });
